@@ -1,0 +1,166 @@
+/* Basic page styling */
+body {
+  font-family: 'Space Grotesk', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #262632
+}
+
+/* Hero section styles */
+.hero {
+  color: #fff;
+  padding-bottom: 60px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Navigation bar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 40px 0 40px;
+}
+
+.logo {
+  font-size: 21px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: #bfc0c7;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.2s;
+}
+
+.nav-links li a:hover,
+.nav-links li .get-in-touch:hover {
+  color: #fff;
+}
+
+.get-in-touch {
+  border: 1px solid #bfc0c7;
+  border-radius: 8px;
+  padding: 8px 18px;
+  color: #fff;
+  background: transparent;
+  font-weight: 500;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.get-in-touch:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+/* Hero content styles */
+.hero-content {
+  max-width: 1200px;
+  margin: 100px auto 0 auto;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-family: 'Inter', Arial, sans-serif;
+  color: #fff;
+  font-size: 124px;
+  font-weight: 900;
+  line-height: 1.05;
+  margin-bottom: 24px;
+  letter-spacing: -2px;
+}
+
+.subtitle {
+  width: 700px;
+  color: #aeb3c2;
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0 auto 36px;
+  line-height: 1.5;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.primary-btn,
+.secondary-btn {
+  font-size: 18px;
+  padding: 14px 28px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+.primary-btn {
+  background: #e6f1e6;
+  color: #23232d;
+  border: 1px solid #e6f1e6;
+}
+
+.primary-btn:hover {
+  background: #d1e7d1;
+}
+
+.secondary-btn {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #bfc0c7;
+}
+
+.secondary-btn:hover {
+  border-color: #fff;
+}
+
+/* Style for the heading */
+h1 {
+  color: #333;
+}
+
+/* Style for the textarea */
+#userInput {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Style for the button */
+#sendBtn {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#sendBtn:hover {
+  background-color: #0056b3;
+}
+
+/* Style for the response area */
+#response {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  min-height: 40px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
