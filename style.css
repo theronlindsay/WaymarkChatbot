@@ -90,6 +90,10 @@ body {
   line-height: 1.5;
 }
 
+button {
+   cursor: pointer;
+}
+
 .hero-buttons {
   display: flex;
   justify-content: center;
@@ -104,7 +108,7 @@ body {
   border: none;
   cursor: pointer;
   font-weight: 500;
-  transition: background 0.2s, color 0.2s, border 0.2s;
+  transition: 0.3s, color 0.2s, border 0.2s;
 }
 
 .primary-btn {
@@ -118,13 +122,19 @@ body {
 }
 
 .secondary-btn {
-  background: transparent;
   color: #fff;
-  border: 1px solid #bfc0c7;
+  border: 2px solid transparent;
+  border-radius: 8px;
+   background-image: 
+    linear-gradient(#1f1f2e, #1f1f2e),
+    linear-gradient(to right, #3bb0ff, #90ff00);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }
 
 .secondary-btn:hover {
-  border-color: #fff;
+   background-image: linear-gradient(to right, #3bb0ff, #90ff00);
+   color: #111;
 }
 
 /* Style for the heading */
