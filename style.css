@@ -206,6 +206,117 @@ h1 {
   background: #2699e6;
 }
 
+/* Chatbot panel styles */
+.chatbot-panel {
+  position: fixed;
+  bottom: 90px;
+  right: 24px;
+  width: 380px;
+  max-width: 95vw;
+  background: linear-gradient(145deg, #2a2a36, #323242);
+  color: #fff;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  padding: 20px 16px 16px 16px;
+  z-index: 1100;
+  display: none; /* Hidden by default */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.chatbot-panel.open {
+  display: flex; /* Show when open class is present */
+  opacity: 1;
+  visibility: visible;
+}
+
+.chatbot-panel h2 {
+  font-size: 22px;
+  margin: 0 0 8px 0;
+  font-family: 'Inter', Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chatbot-panel h2 .material-icons-outlined {
+  font-size: 24px;
+  color: #3bb0ff;
+}
+
+.chatbot-panel textarea {
+  width: 100%;
+  min-height: 48px;
+  border-radius: 8px;
+  border: none;
+  padding: 8px;
+  font-size: 16px;
+  font-family: 'Space Grotesk', Arial, sans-serif;
+  resize: none;
+  margin-bottom: 8px;
+}
+
+.chatbot-input-group {
+  display: flex;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.chatbot-input-group input {
+  flex: 1;
+  background: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.chatbot-input-group input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 176, 255, 0.5);
+}
+
+.chatbot-panel .chatbot-send-btn {
+  background: #3bb0ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.chatbot-panel .chatbot-send-btn:hover {
+  background: #2699e6;
+}
+
+.chatbot-panel .chatbot-send-btn .material-icons-outlined {
+  font-size: 20px;
+}
+
+.chatbot-panel .chatbot-messages {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 10px;
+  min-height: 60px;
+  max-height: 180px;
+  overflow-y: auto;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
 /* Make sure the Material Icons font is used and sized correctly */
 .material-icons-outlined.chatbot-icon {
   font-family: 'Material Icons Outlined', 'Material Icons', Arial, sans-serif !important;
@@ -293,5 +404,12 @@ h1 {
   .primary-btn,
   .secondary-btn {
     width: 100%;
+  }
+  .chatbot-panel {
+    right: 2vw;
+    width: 96vw;
+    min-width: 0;
+    padding: 12px 4vw 12px 4vw;
+    bottom: 60px;
   }
 }

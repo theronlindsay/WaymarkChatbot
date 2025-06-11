@@ -38,11 +38,32 @@
     </div>
   </header>
 
-  <script src="secrets.js"></script>
-  <script src="script.js"></script>
+  <!-- Chatbot Panel (hidden by default) -->
+  <div class="chatbot-panel" id="chatbotPanel">
+    <h2>
+      <span class="material-icons-outlined">smart_toy</span>
+      WayChat
+    </h2>
+    <div class="chatbot-messages" id="chatbotMessages">
+      <!-- Messages will appear here -->
+    </div>
+    <div class="chatbot-input-group">
+      <input 
+        type="text" 
+        id="chatbotInput" 
+        placeholder="Type a message..."
+      >
+      <button class="chatbot-send-btn" id="chatbotSendBtn">
+        <span class="material-icons-outlined">send</span>
+      </button>
+    </div>
+  </div>
   <!-- Chatbot Icon Button using Google Material Icons Outlined -->
-  <button class="chatbot-btn" aria-label="Open chatbot">
+  <button class="chatbot-btn" aria-label="Open chatbot" id="chatbotToggleBtn">
     <span class="material-icons-outlined chatbot-icon">chat</span>
   </button>
+
+  <script src="secrets.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
