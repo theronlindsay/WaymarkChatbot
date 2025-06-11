@@ -3,28 +3,17 @@ const chatbotToggleBtn = document.getElementById('chatbotToggleBtn');
 const chatbotPanel = document.getElementById('chatbotPanel');
 
 if (chatbotToggleBtn && chatbotPanel) {
-  // Simple toggle function
-  const toggleChat = () => {
+  // Toggle chat open/closed when clicking the button
+  chatbotToggleBtn.addEventListener('click', () => {
     chatbotPanel.classList.toggle('open');
-  };
-
-  // Add click listener to button
-  chatbotToggleBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    toggleChat();
   });
 
-  // Prevent panel clicks from closing
-  chatbotPanel.addEventListener('click', (e) => {
-    e.stopPropagation();
-  });
-
-  // Close when clicking outside
+  // Close chat when clicking anywhere except the chat panel or button
   document.addEventListener('click', (e) => {
-    const clickedOutside = !chatbotPanel.contains(e.target) && 
-                          !chatbotToggleBtn.contains(e.target);
-    if (clickedOutside && chatbotPanel.classList.contains('open')) {
+    // If chat is open AND user clicked outside chat area, close it
+    if (chatbotPanel.classList.contains('open') && 
+        !chatbotPanel.contains(e.target) && 
+        !chatbotToggleBtn.contains(e.target)) {
       chatbotPanel.classList.remove('open');
     }
   });
