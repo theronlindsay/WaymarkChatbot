@@ -7,7 +7,7 @@ body {
   font-family: 'Space Grotesk', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #262632
+  background-color: #262632;
 }
 
 /* Hero section styles */
@@ -21,7 +21,7 @@ body {
 /* Navigation bar styles */
 .navbar {
   display: flex;
-  max-width: 1300px;
+  max-width: 1400px;
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
@@ -37,16 +37,16 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 28px;
   align-items: center;
   margin: 0;
   padding: 0;
 }
 
 .nav-links li a {
-  color: #bfc0c7;
+  color: #fff;
   text-decoration: none;
   font-size: 18px;
+  padding: 10px 20px;
   transition: color 0.2s;
 }
 
@@ -60,14 +60,15 @@ body {
   border-radius: 8px;
   padding: 8px 18px;
   color: #fff;
-  background: transparent;
+  background-color: #1c1c28;
   font-weight: 500;
-  transition: border-color 0.2s, color 0.2s;
+  transition: 0.2s;
 }
 
-.get-in-touch:hover {
-  border-color: #fff;
-  color: #fff;
+.nav-links li .get-in-touch:hover {
+  border-color: #4F5066;
+  color: #262632;
+  background-color: #4F5066;
 }
 
 /* Hero content styles */
@@ -92,7 +93,7 @@ body {
   color: #aeb3c2;
   font-size: 26px;
   font-weight: 400;
-  margin: 0 auto 36px;
+  margin: 0 auto 44px;
   line-height: 1.5;
 }
 
