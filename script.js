@@ -5,6 +5,13 @@ const chatbotMessages = document.getElementById('chatbotMessages');
 const chatbotInput = document.getElementById('chatbotInput');
 const chatbotSendBtn = document.getElementById('chatbotSendBtn');
 
+// OpenAI API endpoint for chat completions
+const OPENAI_API_URL = 'https://api.openai.com/v1/chat/completions';
+
+// Model to use for the chatbot
+const OPENAI_MODEL = 'gpt-4o';
+
+
 // Array to store conversation history
 // This includes both user messages and assistant responses
 let conversationHistory = [
@@ -104,7 +111,7 @@ async function sendMessageToAPI(userMessage) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${OPENAI_API_KEY}`
+        'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`
       },
       body: JSON.stringify({
         model: OPENAI_MODEL,
