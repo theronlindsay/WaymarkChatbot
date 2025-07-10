@@ -211,6 +211,7 @@ h1 {
   bottom: 90px;
   right: 24px;
   width: 380px;
+  height: 80vh;
   max-width: 95vw;
   background: linear-gradient(145deg, #2a2a36, #323242);
   color: #fff;
@@ -248,8 +249,9 @@ h1 {
 }
 
 .chatbot-panel textarea {
-  width: 100%;
+  width: min-content;
   min-height: 48px;
+  max-height: fit-content;
   border-radius: 8px;
   border: none;
   padding: 8px;
@@ -265,6 +267,7 @@ h1 {
   background: rgba(0, 0, 0, 0.2);
   padding: 8px;
   border-radius: 8px;
+  margin-top: auto;
 }
 
 .chatbot-input-group input {
@@ -310,7 +313,7 @@ h1 {
   border-radius: 8px;
   padding: 10px;
   min-height: 60px;
-  max-height: 180px;
+  flex: 1;
   overflow-y: auto;
   font-size: 15px;
   margin-bottom: 8px;
@@ -325,6 +328,85 @@ h1 {
   user-select: none;
   pointer-events: none;
   font-variation-settings: 'wght' 400;
+}
+
+/* Text message conversation styling */
+.message {
+  margin-bottom: 12px;
+  width: fit-content;
+  max-width: 80%;
+  padding: 8px 12px;
+  border-radius: 18px;
+  font-size: 14px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.user-message {
+  background: #3bb0ff;
+  color: #fff;
+  margin-left: auto;
+  border-bottom-right-radius: 4px;
+  text-align: right;
+}
+
+.assistant-message {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  margin-right: auto;
+  border-bottom-left-radius: 4px;
+  text-align: left;
+}
+
+/* Typing indicator */
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  width: fit-content;
+  max-width: 80%;
+  padding: 8px 12px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  margin-right: auto;
+  border-bottom-left-radius: 4px;
+}
+
+.typing-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.typing-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #aaa;
+  animation: typing 1.4s infinite;
+}
+
+.typing-dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.typing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0%, 60%, 100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  30% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
 }
 
 /* Responsive styles */
